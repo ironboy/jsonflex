@@ -38,7 +38,7 @@ Include the script clientside like this:
 ```
 
 **Note:** 
-If you want to use the script clientside only (without Node.js) you can do so:
+For non-Node.js users... If you want to use this script clientside only (without Node.js) you can do so:
 * Locate **jsonflex.js**-file in the repository, load only this file and note that JSON._save won't work out of the box.
 
 ## API
@@ -188,6 +188,8 @@ Works just like the normal *JSON.parse* but translates JSON paths to circular re
 Given that we have the JSON from the *JSON._stringify*-example we can now revive it like this:
 
 ```javascript
+JSON._classes(Person, Pet);
+
 let personsRevived = JSON._parse(json);
 
 console.log(personsRevived[0].pets[1].sayHi());
