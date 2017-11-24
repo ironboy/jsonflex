@@ -2,7 +2,7 @@
   "name": "jsonflex",
   "description": "A JSON stringifier and parser than handles and restores circular references and class instances.",
   "author": "Thomas Frank <thomas@nodebite.se (http://nodebite.se)",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "jsonflex-server.js",
   "repository": {
     "type": "git",
