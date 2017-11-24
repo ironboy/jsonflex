@@ -37,6 +37,10 @@ Include the script clientside like this:
 <script src="/jsonflex.js"></script>
 ```
 
+**Note:** 
+If you want to use the script clientside only (without Node.js) you can do so:
+* Locate **jsonflex.js**-file in the repository, load only this file and note that JSON._save won't work out of the box.
+
 ## API
 
 ### JSON._save(filename, data, [, replacer[, space]])
@@ -60,7 +64,7 @@ console.log('Saved!');
 ```
 
 
-### JSON._load(filename[,reviver])
+### JSON._load(filename [, reviver])
 Loads JSON from a file and parses it to JavaScript data using JSON._parse.
 Returns a promise.
 
@@ -78,6 +82,8 @@ let persons = await JSON._load('persons.json');
 console.log(persons);
 ```
 
+**Note:** When used on the clientside JSON._load actually takes an URL rather than a file path as its argument.
+
 ### JSON._classes(...classes)
 Registers class definitions so that JSON._stringify and JSON._parse knows about them and can revive object instances created from classes.
 
@@ -87,7 +93,7 @@ Registers class definitions so that JSON._stringify and JSON._parse knows about 
 JSON._classes(Person, Pet);
 ```
 
-### JSON._stringify(data[, replacer[, space]])
+### JSON._stringify(data [, replacer[, space]])
 Works just like the normal *JSON.stringify* but translates circular references to JSON paths and (optionally, see JSON._classes) "stamps" every object created from a class with its class name.
 
 #### Example
@@ -175,7 +181,7 @@ The contents of the variable **json** would now be:
 ]
 ```
 
-### JSON._parse(data[, reviver])
+### JSON._parse(data [, reviver])
 Works just like the normal *JSON.parse* but translates JSON paths to circular references and (optionally, see JSON._classes) revives object instances.
 
 #### Example
