@@ -33,7 +33,7 @@ There are three options you can change if you want to. Add any or all of them wh
 ### Include clientside
 Include the script clientside like this:
 
-``html
+```html
 <script src="/jsonflex.js"></script>
 ```
 
