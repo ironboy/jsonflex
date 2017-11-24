@@ -30,6 +30,13 @@ There are three options you can change if you want to. Add any or all of them wh
   }));
 ```
 
+### Include clientside
+Include the script clientside like this:
+
+``html
+<script src="/jsonflex.js"></script>
+```
+
 ## API
 
 ### JSON._save(filename, data, [, replacer[, space]])
@@ -85,7 +92,7 @@ Works just like the normal *JSON.stringify* but translates circular references t
 
 #### Example
 ```javascript
-const flexjson = require('./jsonflex-server.js')();
+const flexjson = require('jsonflex.js')();
 
 class Person {
   constructor(name, pets = []){

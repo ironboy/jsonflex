@@ -1,4 +1,4 @@
-const flexjson = require('./jsonflex-server.js')();
+const flexjson = require('jsonflex')();
 
 class Person {
   constructor(name, pets = []){
