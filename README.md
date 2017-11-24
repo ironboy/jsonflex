@@ -20,13 +20,14 @@ app.use(flexjson);
 ```
 
 ### Options
-There are three options you can change if you want to. Add any or all of them when requiring **flexjson**. Below they are listed with their default values:
+There are four options you can change if you want to. Add any or all of them when requiring **flexjson**. Below they are listed with their default values:
 
 ```javascript
   const flexjson = require('jsonflex')({
     jsonDir: '/www/json', // directory on server to save json to
+    scriptUrl: '/jsonflex.js', // url to load clientside script from
     saveUrl: '/json-save', // url used by jsonflex to save json
-    scriptUrl: '/jsonflex.js' // url to load clientside script from
+    loadUrlPrefix: '/json/' // prefix to add to clientside load url
   }));
 ```
 

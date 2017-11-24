@@ -4,7 +4,7 @@ const appRoot = require('app-root-path').path;
 const mkdirp = require('mkdirp');
 const asleep = require('asleep');
 const bodyParser = require('body-parser');
-const jsonParser = bodyParser.json();
+const jsonParser = bodyParser.json({limit:'10000kb'});
 require('./jsonflex.js');
 
 module.exports = (options) => {
