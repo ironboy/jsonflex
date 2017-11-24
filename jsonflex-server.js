@@ -36,7 +36,7 @@ module.exports = (options) => {
     });
   }
 
-  let script = fs.readFileSync('./jsonflex.js', 'utf8');
+  let script = fs.readFileSync(path.join(__dirname,'jsonflex.js'), 'utf8');
   script = script.split('/json-save').join(options.saveUrl);
 
   function serveScript(req, res){
