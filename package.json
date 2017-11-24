@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ironboy/jsonflex"
-  }7
+  },
   "bugs": "https://github.com/ironboy/jsonflex/issues",
   "license": "MIT",
   "engines": {
