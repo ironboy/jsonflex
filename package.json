@@ -2,7 +2,7 @@
   "name": "jsonflex",
   "description": "A JSON stringifier and parser than handles and restores circular references and class instances.",
   "author": "Thomas Frank <thomas@nodebite.se (http://nodebite.se)",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "jsonflex-server.js",
   "repository": {
     "type": "git",
@@ -14,6 +14,9 @@
     "node": ">=7.10.1"
   },
   "dependencies": {
+    "app-root-path": "^2.0.1",
+    "asleep": "^1.0.3",
+    "body-parser": "^1.18.2",
     "mkdirp": "^0.5.1"
   },
   "tonicExampleFilename": "tonic-example.js"
