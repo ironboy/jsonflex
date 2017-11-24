@@ -24,8 +24,8 @@ There are three options you can change if you want to. Add any or all of them wh
 
 ```javascript
   const flexjson = require('jsonflex')({
-    saveUrl: '/json-save', // url used by jsonflex to save json
     jsonDir: '/www/json', // directory on server to save json to
+    saveUrl: '/json-save', // url used by jsonflex to save json
     scriptUrl: '/jsonflex.js' // url to load clientside script from
   }));
 ```
