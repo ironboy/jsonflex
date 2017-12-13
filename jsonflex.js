@@ -4,7 +4,7 @@
 
   function val(obj, path, val){
     let get = val === undefined;
-    path = path.replace(/\[(\d)\]/g,'.$1');
+    path = path.replace(/\[(\d*)\]/g,'.$1');
     path = path.split('.');
     path.shift();
     while(path.length > (get ? 0 : 1)){
