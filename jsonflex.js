@@ -91,6 +91,12 @@
 
   JSON._parse = (str, reviver) => {
     let obj = JSON.parse(str, reviver);
+    if (obj['⚙'] && classes[obj['⚙']]) {
+      let instance = new classes[obj['⚙']]();
+      Object.assign(instance, obj);
+      delete instance['⚙'];
+      obj = instance;
+    }
     recurser(obj, 'hard');
     return obj;
   }
