@@ -83,7 +83,6 @@
   }
 
   JSON._stringify = (obj, replacer, space = '  ')=>{
-    obj = !Array.isArray(obj) ? ['⚑', obj] : obj;
     recurser(obj);
     let result = JSON.stringify(obj, replacer, space);
     recurser(obj, true);
@@ -92,8 +91,13 @@
 
   JSON._parse = (str, reviver) => {
     let obj = JSON.parse(str, reviver);
+    if (obj['⚙'] && classes[obj['⚙']]) {
+      let instance = new classes[obj['⚙']]();
+      Object.assign(instance, obj);
+      delete instance['⚙'];
+      obj = instance;
+    }
     recurser(obj, 'hard');
-    obj = Array.isArray(obj) && obj.length === 2 && obj[0] === '⚑' ? obj[1] : obj;
     return obj;
   }
 
